@@ -35,5 +35,9 @@ console.log(await fetch('https://proxi.deno.dev?https://google.com', {
   body: JSON.stringify({ shrug: '¯\_(ツ)_/¯' })
 }))
 ```
-
 etc.
+
+# other use cases
+- HTTP to HTTPS.
+- CDN.
+- whatever else you want?
