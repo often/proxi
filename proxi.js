@@ -16,7 +16,7 @@ let handle = async request =>
   catch (error) { return new Response(error.message, { status: 502, headers: responseHeaders }) }
 
   for (let [name, value] of response.headers)
-  if (!responseHeaders.has(name)) responseHeaders.set(name, value)
+  if (name != 'access-control-allow-origin') responseHeaders.set(name, value)
 
   return new Response(response.body, { status: response.status, headers: responseHeaders })
 }
